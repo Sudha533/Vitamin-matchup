@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Vitamin Matchup</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<!-- Font Awesome Icon Library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="jumbotron text-center" style="margin-bottom:0">
+			<h1>Vitamin Match-up</h1>
+			<p>Match the vitamin to the food.</p>
+		</div>
+		<div class="container text-center" style="margin-top:30px;margin-left:auto ;margin-right:auto">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+		</div>
+		<div class="container text-center ans-container" style="margin-top:30px;margin-left:auto ;margin-right:auto">
+		
+			<div class="row ">
+				<div class="col-sm-6 col-6 text-center borderRight ">
+					<h5 class="verticalMiddle">Vitamin A </h5>
+				</div>
+				
+				<div class="col-sm-6 col-6">
+					<div class="square" id="dropzone-vitamin-a" ondragover="dragover_handler(event);" ondrop="drop_handler(event);"></div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-sm-6 col-6 text-center borderRight">
+					<h5 class="verticalMiddle">Vitamin C </h5>
+				</div>
+				
+				<div class="col-sm-6 col-6 ">
+					<div class="square" id="dropzone-vitamin-c" ondragover="dragover_handler(event);" ondrop="drop_handler(event);"></div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-sm-6 col-6 text-center borderRight ">
+					<h5 class="verticalMiddle">Vitamin E </h5>
+				</div>
+				
+				<div class="col-sm-6 col-6">
+					<div class="square" id="dropzone-vitamin-e" ondragover="dragover_handler(event);" ondrop="drop_handler(event);"></div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-sm-6 col-6  text-center borderRight">
+					<h5 class="verticalMiddle">Vitamin K </h5>
+				</div>
+				
+				<div class="col-sm-6 col-6">
+					<div class="square" id="dropzone-vitamin-k" ondragover="dragover_handler(event);" ondrop="drop_handler(event);"></div>
+				</div>
+			</div>
+		</div>
+		<div class="container text-center img-container" style="margin-top:30px;margin-left:auto ;margin-right:auto">
+			<div class="row ">
+				<div class="col-sm-3">
+					<img id="img-vitamin-a" src="images/vitamin-a.png" draggable="true" style="width:100%" alt="vitamin-a" ondragstart= "dragstart_handler(event)">
+				</div>
+				<div class="col-sm-3">
+					<img id="img-vitamin-c" src="images/vitamin-c.png" draggable="true" style="width:100%" alt="vitamin-c" ondragstart= "dragstart_handler(event)">
+				</div>
+				<div class="col-sm-3 ">
+					<img id="img-vitamin-e" src="images/vitamin-e.png" draggable="true" style="width:100%" alt="vitamin-e" ondragstart= "dragstart_handler(event)">
+				</div>
+				<div class="col-sm-3">
+					<img id="img-vitamin-k" src="images/vitamin-k.png" draggable="true" style="width:100%" alt="vitamin-k" ondragstart= "dragstart_handler(event)">
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--Modal to show the results-->
+		
+		<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+
+		<div class="float-right close" style="cursor:pointer;margin-left:93%" data-dismiss="modal">&times;</div>
+		<div class="text-center" id="emoji-container"></div>
+       
+        <div class="modal-body" id="modal-body">
+          <p></p>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+ 
+	</body>
+</html>
